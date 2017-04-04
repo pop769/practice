@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Work10039 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a=0;
+		int sum=0;
+		
+		for(int i=0;i<5;i++){
+			a=sc.nextInt();
+			if(a<0 || a>100 || a%5!=0){
+				System.out.println("잘못된 입력입니다.");
+				break ;
+			}else if(a<40){
+				sum = sum + 40;
+			} else {
+				sum = sum+a;
+			}
+		}
+		if(0<a && a<100 && a%5==0){
+		System.out.println(sum/5);
+		}
+			
+	}
+
+}
