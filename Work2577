@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Work2577 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int A = sc.nextInt();
+		int B = sc.nextInt();
+		int C = sc.nextInt();
+		int mul=0;
+		
+		if (A<100 || B<100 || C<100){
+			System.out.println("100보다 크고 1000보다 작은수를 입력해주세요.");
+		} else if(A>=1000 || B>=1000 || C>=1000){
+			System.out.println("100보다 크고 1000보다 작은수를 입력해주세요.");
+		}
+		mul =  A*B*C;
+		String comp = Integer.toString(mul);
+		char comp2[] = comp.toCharArray();
+		int num[] = new int[10];
+		
+		for(int i =0; i<comp2.length;i++){
+			for(int j=0;j<comp2.length;j++){
+				if(comp2[j]=='0'+i){
+					num[i] = num[i]+1;
+				}
+			}
+		}
+		for(int i=0;i<10;i++){
+			System.out.println(num[i]);
+		}
+	}
+}
