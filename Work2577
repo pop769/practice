@@ -27,8 +27,12 @@ public class Work2577 {
 				}
 			}
 		}
-		for(int i=0;i<10;i++){
-			System.out.println(num[i]);
+		System.out.println(comp2);
+		
+		if(A>100 && B>100 && C>100 && A<=1000 && B<=1000 && C<=1000){
+			for(int i=0;i<10;i++){
+				System.out.println(num[i]);
+			}
 		}
 	}
 }
