@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Work2577 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+				Scanner sc = new Scanner(System.in);
 		
 		int A = sc.nextInt();
 		int B = sc.nextInt();
@@ -18,7 +18,7 @@ public class Work2577 {
 		mul =  A*B*C;
 		String comp = Integer.toString(mul);
 		char comp2[] = comp.toCharArray();
-		int num[] = new int[10];
+		int num[] = new int[comp2.length];
 		
 		for(int i =0; i<comp2.length;i++){
 			for(int j=0;j<comp2.length;j++){
@@ -30,7 +30,7 @@ public class Work2577 {
 		System.out.println(comp2);
 		
 		if(A>100 && B>100 && C>100 && A<=1000 && B<=1000 && C<=1000){
-			for(int i=0;i<10;i++){
+			for(int i=0;i<comp2.length;i++){
 				System.out.println(num[i]);
 			}
 		}
