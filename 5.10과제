@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class GameBoom {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("크기를 입력해 주세요.");
+		int a = sc.nextInt() , b = sc.nextInt();
+		int arr[][] = new int [a][b];
+		int c=(int) (Math.random()*100);
+		int d=(int) (Math.random()*100);
+		while(c>a||d>b){
+			c=(int) (Math.random()*100);
+			d=(int) (Math.random()*100);
+		}
+		arr[c][d] = 1;
+		int x=0, y=0;
+		System.out.println("수를 입력해 주세요.");
+		while(arr[x][y]!=1){
+			x = sc.nextInt();
+			y = sc.nextInt();
+			if(x==c&&y==d)
+				break;
+			if(x==c){
+			} else if(x>c){
+				System.out.println("더 작은를 입력해 주세요.");
+			} else {
+				System.out.println("더 큰수를 입력해 주세요.");
+			}
+			if(y==d){
+			} else if(y>d){
+				System.out.println("더 작은수를 입력해 주세요.");
+			} else {
+				System.out.println("더 큰수를 입력해 주세요.");
+			}
+		}
+		System.out.println("맞췄습니다.");
+		
+	}
+}
